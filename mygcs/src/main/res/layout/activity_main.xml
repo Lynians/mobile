@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.naver.maps.map.MapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:background="@color/colorGray"
+            android:text="Clear" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <Button
+            android:id="@+id/cadastral_off"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorGray"
+            android:text="OFF" />
+
+        <Button
+            android:id="@+id/cadastral_menu"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:background="@color/colorGray"
+            android:text="지적도" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/satellite"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorGray"
+            android:text="위성지도" />
+
+        <Button
+            android:id="@+id/terrain"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorGray"
+            android:text="지형도" />
+
+        <Button
+            android:id="@+id/hybrid"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorGray"
+            android:text="일반지도" />
+
+        <Button
+            android:id="@+id/menu"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:background="@color/colorGray"
+            android:text="일반지도" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="260dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/map_move"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorGray"
+            android:text="맵 이동" />
+
+        <Button
+            android:id="@+id/map_lock"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorGray"
+            android:text="맵 잠금" />
+
+        <Button
+            android:id="@+id/map_lock_menu"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:background="@color/colorGray"
+            android:text="맵 잠금" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:background="@color/colorGray"
+            android:text="ARM" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:background="@color/colorGray"
+            android:text="Take-Off" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:background="@color/colorGray"
+            android:text="Take-Off" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout12"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#99000000"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/voltage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="50dp"
+            android:text="전압"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/voltage_number"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/voltage_number"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="30dp"
+            android:text="0V"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintLeft_toRightOf="@id/voltage"
+            app:layout_constraintRight_toLeftOf="@+id/drone_mode_text"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/drone_mode_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="30dp"
+            android:text="비행모드"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/altitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="고도"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/altitude_number"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="30dp"
+            android:text="100m"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/velocity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="속도"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/velocity_number"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="30dp"
+            android:text="0m/s"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/YWA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="YWA"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/YWA_number"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="30dp"
+            android:text="0deg"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/satellite_number_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="위성 수"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/satellite_number"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="0"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
