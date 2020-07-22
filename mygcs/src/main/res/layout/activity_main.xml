@@ -150,7 +150,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/flight_btn"
             android:layout_width="70dp"
             android:layout_height="35dp"
             android:background="@color/colorGray"
@@ -165,15 +165,7 @@
         android:layout_marginBottom="20dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <Button
-            android:id="@+id/button10"
-            android:layout_width="70dp"
-            android:layout_height="35dp"
-            android:background="@color/colorGray"
-            android:text="Take-Off" />
-    </LinearLayout>
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <LinearLayout
         android:id="@+id/linearLayout7"
@@ -183,15 +175,7 @@
         android:layout_marginBottom="20dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <Button
-            android:id="@+id/button11"
-            android:layout_width="70dp"
-            android:layout_height="35dp"
-            android:background="@color/colorGray"
-            android:text="Take-Off" />
-    </LinearLayout>
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <LinearLayout
         android:id="@+id/linearLayout12"
@@ -202,13 +186,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
+        <ImageButton
+            android:background="#00000000"
+            android:id="@+id/menu_btn"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:srcCompat="@drawable/menu_icon"
+            tools:layout_editor_absoluteX="143dp"
+            tools:layout_editor_absoluteY="97dp" />
         <TextView
             android:id="@+id/voltage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="20dp"
             android:text="전압"
             android:textColor="@color/colorWhite"
             app:layout_constraintHorizontal_chainStyle="packed"
@@ -222,7 +215,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="10dp"
             android:text="0V"
             android:textColor="@color/colorWhite"
             app:layout_constraintLeft_toRightOf="@id/voltage"
@@ -234,10 +227,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="8dp"
             android:text="비행모드"
             android:textColor="@color/colorWhite" />
-
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="81dp"
+            android:text="모드 선택"
+            android:textColor="@color/colorWhite"
+            android:layout_marginRight="15dp"/>
         <TextView
             android:id="@+id/altitude"
             android:layout_width="wrap_content"
@@ -252,8 +253,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
-            android:layout_marginRight="30dp"
-            android:text="100m"
+            android:layout_marginRight="15dp"
+            android:text="0m"
             android:textColor="@color/colorWhite" />
 
         <TextView
@@ -270,12 +271,12 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="15dp"
             android:text="0m/s"
             android:textColor="@color/colorWhite" />
 
         <TextView
-            android:id="@+id/YWA"
+            android:id="@+id/YAW"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -283,12 +284,12 @@
             android:textColor="@color/colorWhite" />
 
         <TextView
-            android:id="@+id/YWA_number"
+            android:id="@+id/YAW_number"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="15dp"
             android:text="0deg"
             android:textColor="@color/colorWhite" />
 
@@ -309,4 +310,8 @@
             android:text="0"
             android:textColor="@color/colorWhite" />
     </LinearLayout>
+
+
+
+
 </android.support.constraint.ConstraintLayout>
