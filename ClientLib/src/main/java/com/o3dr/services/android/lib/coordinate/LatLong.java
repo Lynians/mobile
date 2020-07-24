@@ -111,7 +111,13 @@ public class LatLong implements Parcelable, Serializable {
                 ", longitude=" + longitude +
                 '}';
     }
-
+    //@Override
+    //public String toString() {
+        //return "LatLong{" +
+               // "latitude=" + latitude +
+               // ", longitude=" + longitude +
+                //'}';
+   // }
     @Override
     public int describeContents() {
         return 0;
@@ -131,4 +137,5 @@ public class LatLong implements Parcelable, Serializable {
             return new LatLong[size];
         }
     };
+
 }

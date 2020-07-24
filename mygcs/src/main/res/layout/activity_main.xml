@@ -17,6 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
@@ -139,23 +140,18 @@
             android:text="맵 잠금" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+    <Button
+        android:id="@+id/flight_btn"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="20dp"
-        android:orientation="vertical"
+        android:background="@color/colorGray"
+        android:text="ARM"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/flight_btn"
-            android:layout_width="70dp"
-            android:layout_height="35dp"
-            android:background="@color/colorGray"
-            android:text="ARM" />
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout6"
