@@ -196,7 +196,7 @@
             android:id="@+id/voltage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             android:layout_marginLeft="20dp"
             android:text="전압"
             android:textColor="@color/colorWhite"
@@ -210,7 +210,7 @@
             android:layout_width="38dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             android:layout_marginRight="10dp"
             android:text="0V"
             android:textColor="@color/colorWhite"
@@ -222,24 +222,25 @@
             android:id="@+id/drone_mode_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             android:layout_marginRight="8dp"
             android:text="비행모드"
             android:textColor="@color/colorWhite" />
         <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="81dp"
-            android:text="모드 선택"
+            android:id="@+id/modeSelect"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="8dp"
+
             android:textColor="@color/colorWhite"
-            android:layout_marginRight="15dp"/>
+            android:spinnerMode="dropdown" />
+
         <TextView
             android:id="@+id/altitude"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             android:text="고도"
             android:textColor="@color/colorWhite" />
 
@@ -248,7 +249,7 @@
             android:layout_width="36dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             android:layout_marginRight="15dp"
             android:text="0m"
             android:textColor="@color/colorWhite" />
@@ -257,7 +258,7 @@
             android:id="@+id/velocity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             android:text="속도"
             android:textColor="@color/colorWhite" />
 
@@ -266,7 +267,7 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             android:layout_marginRight="15dp"
             android:text="0m/s"
             android:textColor="@color/colorWhite" />
@@ -275,7 +276,7 @@
             android:id="@+id/YAW"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             android:text="YWA"
             android:textColor="@color/colorWhite" />
 
@@ -284,7 +285,7 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             android:layout_marginRight="15dp"
             android:text="0deg"
             android:textColor="@color/colorWhite" />
@@ -293,7 +294,7 @@
             android:id="@+id/satellite_number_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             android:text="위성 수"
             android:textColor="@color/colorWhite" />
 
@@ -302,12 +303,52 @@
             android:layout_width="25dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             android:text="0"
             android:textColor="@color/colorWhite" />
     </LinearLayout>
 
+    <ImageButton
+        android:id="@+id/disconnBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/shutdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="350dp"
+        android:layout_marginBottom="20dp"
+        android:background="#00000000"/>
 
+    <Button
+        android:id="@+id/altitude_setting"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/colorGray"
+        android:text="0.0m"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/increase_altitude"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/colorGray"
+        android:text="+0.5m"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/decrease_altitude"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/colorGray"
+        android:text="-0.5m"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
