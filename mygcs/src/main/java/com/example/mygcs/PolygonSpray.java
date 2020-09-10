@@ -163,7 +163,7 @@
 //            }
 //        }
 //
-//        LatLong dronePosition = mainActivity.myDrone.getManageDroneState().getDronePosition();
+//        LatLong dronePosition = mainActivity.drone.getManageDroneState().getDronePosition();
 //        double dist1 = MathUtils.pointToLineDistance(trimedGrid.get(0).getStart(), trimedGrid.get(0).getEnd(), dronePosition);
 //        double dist2 = MathUtils.pointToLineDistance(trimedGrid.get(trimedGrid.size()-1).getStart(), trimedGrid.get(trimedGrid.size()-1).getEnd(), dronePosition);
 //

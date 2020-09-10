@@ -163,40 +163,25 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
-    <LinearLayout
-        android:id="@+id/linearLayout7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="180dp"
-        android:layout_marginBottom="20dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
 
+    //android:background="#99000000"
     <LinearLayout
-        android:id="@+id/linearLayout12"
+        android:id="@+id/status_bar"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:background="#99000000"
+        android:background="@drawable/gradient"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-        <ImageButton
-            android:background="#00000000"
-            android:id="@+id/menu_btn"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="2dp"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            app:srcCompat="@drawable/menu_icon"
-            tools:layout_editor_absoluteX="143dp"
-            tools:layout_editor_absoluteY="97dp" />
+
+
+
         <TextView
             android:id="@+id/voltage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="4dp"
             android:layout_marginLeft="20dp"
             android:text="전압"
             android:textColor="@color/colorWhite"
@@ -210,7 +195,7 @@
             android:layout_width="38dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="4dp"
             android:layout_marginRight="10dp"
             android:text="0V"
             android:textColor="@color/colorWhite"
@@ -222,7 +207,7 @@
             android:id="@+id/drone_mode_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="4dp"
             android:layout_marginRight="8dp"
             android:text="비행모드"
             android:textColor="@color/colorWhite" />
@@ -230,7 +215,7 @@
             android:id="@+id/modeSelect"
             android:layout_width="100dp"
             android:layout_height="25dp"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="4dp"
             android:layout_marginRight="8dp"
 
             android:textColor="@color/colorWhite"
@@ -240,7 +225,7 @@
             android:id="@+id/altitude"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="4dp"
             android:text="고도"
             android:textColor="@color/colorWhite" />
 
@@ -249,7 +234,7 @@
             android:layout_width="36dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="4dp"
             android:layout_marginRight="15dp"
             android:text="0m"
             android:textColor="@color/colorWhite" />
@@ -258,7 +243,7 @@
             android:id="@+id/velocity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="4dp"
             android:text="속도"
             android:textColor="@color/colorWhite" />
 
@@ -267,7 +252,7 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="4dp"
             android:layout_marginRight="15dp"
             android:text="0m/s"
             android:textColor="@color/colorWhite" />
@@ -276,7 +261,7 @@
             android:id="@+id/YAW"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="4dp"
             android:text="YWA"
             android:textColor="@color/colorWhite" />
 
@@ -285,7 +270,7 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="4dp"
             android:layout_marginRight="15dp"
             android:text="0deg"
             android:textColor="@color/colorWhite" />
@@ -294,7 +279,7 @@
             android:id="@+id/satellite_number_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="4dp"
             android:text="위성 수"
             android:textColor="@color/colorWhite" />
 
@@ -303,9 +288,15 @@
             android:layout_width="25dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="4dp"
             android:text="0"
             android:textColor="@color/colorWhite" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:srcCompat="@drawable/connection_off" />
     </LinearLayout>
 
     <ImageButton
@@ -319,164 +310,53 @@
         android:layout_marginBottom="20dp"
         android:background="#00000000"/>
 
-    <Button
-        android:id="@+id/altitude_setting"
-        android:layout_width="70dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="20dp"
-        android:background="@color/colorGray"
-        android:text="이륙고도\n0.0m"
-        android:textSize="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:id="@+id/increase_altitude"
-        android:layout_width="70dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="75dp"
-        android:layout_marginEnd="20dp"
-        android:background="@color/colorGray"
-        android:text="+0.5m"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:id="@+id/decrease_altitude"
-        android:layout_width="70dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="115dp"
-        android:layout_marginEnd="20dp"
-        android:background="@color/colorGray"
-        android:text="-0.5m"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <LinearLayout
-        android:id="@+id/mission_btn"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="100dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <Button
+            android:id="@+id/altitude_setting"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:background="@color/colorGray"
+            android:text="이륙고도\n0.0m"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/increase_altitude"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorGray"
+            android:text="+0.5m"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/decrease_altitude"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorGray"
+            android:text="-0.5m"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/connect_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="100dp"
-        android:orientation="vertical"
+        android:layout_marginEnd="432dp"
+        android:layout_marginBottom="20dp"
+        android:background="#00000000"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <Button
-            android:id="@+id/mission_selection"
-            android:layout_width="70dp"
-            android:layout_height="35dp"
-            android:background="@color/colorGray"
-            android:text="Mission"
-            android:textSize="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        <Button
-            android:id="@+id/ab_btn"
-            android:layout_width="70dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="5dp"
-            android:background="@color/colorGray"
-            android:text="AB"
-            android:textSize="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        <Button
-            android:id="@+id/polygon_btn"
-            android:layout_width="70dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="5dp"
-            android:background="@color/colorGray"
-            android:text="다각형"
-            android:textSize="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        <Button
-            android:id="@+id/mission_cancel"
-            android:layout_width="70dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="5dp"
-            android:background="@color/colorGray"
-            android:text="CANCEL"
-            android:textSize="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/flight_range"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="180dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <Button
-            android:id="@+id/range_setting"
-            android:layout_width="70dp"
-            android:layout_height="35dp"
-            android:background="@color/colorGray"
-            android:text="비행 폭\n0.0m"
-            android:textSize="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        <Button
-            android:id="@+id/increase_range"
-            android:layout_width="70dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="5dp"
-            android:background="@color/colorGray"
-            android:text="+0.5m"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        <Button
-            android:id="@+id/decrease_range"
-            android:layout_width="70dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="5dp"
-            android:background="@color/colorGray"
-            android:text="-0.5m"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/ab_distance"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="260dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <Button
-            android:id="@+id/ab_setting"
-            android:layout_width="70dp"
-            android:layout_height="35dp"
-            android:background="@color/colorGray"
-            android:text="ab 거리\n0.0m"
-            android:textSize="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        <Button
-            android:id="@+id/increase_ab"
-            android:layout_width="70dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="5dp"
-            android:background="@color/colorGray"
-            android:text="+0.5m"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        <Button
-            android:id="@+id/decrease_ab"
-            android:layout_width="70dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="5dp"
-            android:background="@color/colorGray"
-            android:text="-0.5m"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </LinearLayout>
+        app:srcCompat="@drawable/connect_btn" />
 
 
 </android.support.constraint.ConstraintLayout>

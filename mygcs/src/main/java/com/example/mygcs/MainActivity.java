@@ -113,9 +113,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         deleteCadastralMenuVisibility();
         deleteMapLockMenuVisibility();
         deleteAltitudeMenuVisibility();
-        deleteAbDistanceMenuVisibility();
-        deleteFlightRangeMenuVisibility();
-        deleteMissionMenuVisibility();
     }
     public void onFlightModeSelected(View view) {
         VehicleMode vehicleMode = (VehicleMode) this.modeSelector.getSelectedItem();
@@ -137,17 +134,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
     }
-    public void deleteMissionMenuVisibility(){
-        View view = null;
-        Button missionBtn = (Button) findViewById(R.id.mission_selection);
-        Button abBtn = (Button) findViewById(R.id.ab_btn);
-        Button polygonBtn = (Button) findViewById(R.id.polygon_btn);
-        Button cancelBtn = (Button) findViewById(R.id.mission_cancel);
-        missionBtn.setVisibility(view.GONE);
-        abBtn.setVisibility(view.GONE);
-        polygonBtn.setVisibility(view.GONE);
-        cancelBtn.setVisibility(view.GONE);
-    }
+
     public void deleteAltitudeMenuVisibility(){
         View view = null;
         Button alt_set = (Button) findViewById(R.id.altitude_setting);
@@ -157,23 +144,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         inc_alt.setVisibility(view.GONE);
         dec_alt.setVisibility(view.GONE);
     }
-    public void deleteAbDistanceMenuVisibility(){
-        View view = null;
-        Button ab_set = (Button) findViewById(R.id.ab_setting);
-        Button inc_ab = (Button) findViewById(R.id.increase_ab);
-        Button dec_ab = (Button) findViewById(R.id.decrease_ab);
-        ab_set.setVisibility(view.GONE);
-        inc_ab.setVisibility(view.GONE);
-        dec_ab.setVisibility(view.GONE);
-    }public void deleteFlightRangeMenuVisibility(){
-        View view = null;
-        Button rang_set = (Button) findViewById(R.id.range_setting);
-        Button inc_rang = (Button) findViewById(R.id.increase_range);
-        Button dec_rang = (Button) findViewById(R.id.decrease_range);
-        rang_set.setVisibility(view.GONE);
-        inc_rang.setVisibility(view.GONE);
-        dec_rang.setVisibility(view.GONE);
-    }
+
 
     public void deleteMapMenuVisibility(){
         View view = null;
@@ -442,91 +413,20 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         final Button map_move = (Button) findViewById(R.id.map_move);
         final Button map_lock = (Button) findViewById(R.id.map_lock);
         final Button map_lock_menu = (Button) findViewById(R.id.map_lock_menu);
-        final ImageButton menu_btn = (ImageButton) findViewById(R.id.menu_btn);
+
         final Button clear_btn = (Button) findViewById(R.id.clear);
         final Button flight_btn = (Button) findViewById(R.id.flight_btn);
         final ImageButton disBtn = (ImageButton) findViewById(R.id.disconnBtn);
         final Button altBtn = (Button) findViewById(R.id.altitude_setting);
         final Button inAltBtn = (Button) findViewById(R.id.increase_altitude);
         final Button deAltBtn = (Button) findViewById(R.id.decrease_altitude);
-        final Button abSetBtn = (Button) findViewById(R.id.ab_setting);
-        final Button inAbBtn = (Button) findViewById(R.id.increase_ab);
-        final Button deAbBtn = (Button) findViewById(R.id.decrease_ab);
-        final Button rangeBtn = (Button) findViewById(R.id.range_setting);
-        final Button inRangeBtn = (Button) findViewById(R.id.increase_range);
-        final Button deRangeBtn = (Button) findViewById(R.id.decrease_range);
-        final Button missionBtn = (Button) findViewById(R.id.mission_selection);
-        final Button abBtn = (Button) findViewById(R.id.ab_btn);
-        final Button polygonBtn = (Button) findViewById(R.id.polygon_btn);
-        final Button cancelBtn = (Button) findViewById(R.id.mission_cancel);
+
         myMap.setMapType(NaverMap.MapType.Hybrid);
         hybrid_btn.setBackgroundColor(Color.YELLOW);
 
         deleteAllMenuVisibility();
 
-        menu_btn.setOnClickListener(new Button.OnClickListener() {
-            boolean click = true;
 
-            @Override
-            public void onClick(View view) {
-                if(click){
-                    map_menu.setVisibility(view.VISIBLE);
-                    cadastral_menu.setVisibility(view.VISIBLE);
-                    map_lock_menu.setVisibility(view.VISIBLE);
-                    clear_btn.setVisibility(view.VISIBLE);
-                    flight_btn.setVisibility(view.VISIBLE);
-                    disBtn.setVisibility(view.VISIBLE);
-                    altBtn.setVisibility(view.VISIBLE);
-                    abSetBtn.setVisibility(view.VISIBLE);
-                    rangeBtn.setVisibility(view.VISIBLE);
-                    missionBtn.setVisibility(view.VISIBLE);
-                    click = false;
-                }
-                else{
-                    satellite_btn.setVisibility(view.GONE);
-                    terrain_btn.setVisibility(view.GONE);
-                    hybrid_btn.setVisibility(view.GONE);
-                    map_menu.setVisibility(view.GONE);
-                    map_menu.setBackgroundColor(Color.parseColor("#d3d3d3"));
-                    cadastral_off.setVisibility(view.GONE);
-                    cadastral_menu.setVisibility(view.GONE);
-                    cadastral_menu.setBackgroundColor(Color.parseColor("#d3d3d3"));
-                    map_move.setVisibility(view.GONE);
-                    map_lock.setVisibility(view.GONE);
-                    map_lock_menu.setVisibility(view.GONE);
-                    map_lock_menu.setBackgroundColor(Color.parseColor("#d3d3d3"));
-                    clear_btn.setVisibility(view.GONE);
-                    flight_btn.setVisibility(view.GONE);
-                    disBtn.setVisibility(view.GONE);
-                    altBtn.setVisibility(view.GONE);
-                    altBtn.setBackgroundColor(Color.parseColor("#d3d3d3"));
-                    inAltBtn.setVisibility(view.GONE);
-                    deAltBtn.setVisibility(view.GONE);
-                    abSetBtn.setVisibility(view.GONE);
-                    abSetBtn.setBackgroundColor(Color.parseColor("#d3d3d3"));
-                    inAbBtn.setVisibility(view.GONE);
-                    deAbBtn.setVisibility(view.GONE);
-                    rangeBtn.setVisibility(view.GONE);
-                    rangeBtn.setBackgroundColor(Color.parseColor("#d3d3d3"));
-                    inRangeBtn.setVisibility(view.GONE);
-                    deRangeBtn.setVisibility(view.GONE);
-                    missionBtn.setVisibility(view.GONE);
-                    missionBtn.setBackgroundColor(Color.parseColor("#d3d3d3"));
-                    abBtn.setVisibility(view.GONE);
-                    polygonBtn.setVisibility(view.GONE);
-                    cancelBtn.setVisibility(view.GONE);
-                    menu_click1 = true;
-                    menu_click2 = true;
-                    menu_click3 = true;
-                    menu_click4 = true;
-                    ab_click = true;
-                    distance_click = true;
-                    mission_click = true;
-                    click = true;
-                }
-            }
-
-        });
         satellite_btn.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -742,114 +642,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
         //
-        abSetBtn.setOnClickListener(new Button.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                if (inAbBtn.getVisibility() == view.GONE) {
-                    inAbBtn.setVisibility(view.VISIBLE);
-                } else {
-                    inAbBtn.setVisibility(view.GONE);
-                }
-                if (deAbBtn.getVisibility() == view.GONE) {
-                    deAbBtn.setVisibility(view.VISIBLE);
-                } else {
-                    deAbBtn.setVisibility(view.GONE);
-                }
-                if (ab_click) {
-                    abSetBtn.setBackgroundColor(Color.YELLOW);
-                    ab_click = false;
-                } else {
-                    abSetBtn.setBackgroundColor(Color.parseColor("#d3d3d3"));
-                    ab_click = true;
-                }
-            }
-        });
-        inAbBtn.setOnClickListener(new Button.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AbDistanceSetting += 0.5;
-                abSetBtn.setText(String.format("AB 거리\n%3.1f", AbDistanceSetting) + "m");
-            }
-        });
-        deAbBtn.setOnClickListener(new Button.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(AbDistanceSetting >= 0.5){
-                    AbDistanceSetting -= 0.5;
-                    abSetBtn.setText(String.format("AB 거리\n%3.1f", AbDistanceSetting) + "m");
-                }
-            }
-        });
-        //
-        rangeBtn.setOnClickListener(new Button.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if (inRangeBtn.getVisibility() == view.GONE) {
-                    inRangeBtn.setVisibility(view.VISIBLE);
-                } else {
-                    inRangeBtn.setVisibility(view.GONE);
-                }
-                if (deRangeBtn.getVisibility() == view.GONE) {
-                    deRangeBtn.setVisibility(view.VISIBLE);
-                } else {
-                    deRangeBtn.setVisibility(view.GONE);
-                }
-                if (distance_click) {
-                    rangeBtn.setBackgroundColor(Color.YELLOW);
-                    distance_click = false;
-                } else {
-                    rangeBtn.setBackgroundColor(Color.parseColor("#d3d3d3"));
-                    distance_click = true;
-                }
-            }
-        });
-        inRangeBtn.setOnClickListener(new Button.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                flightRangeSetting += 0.5;
-                rangeBtn.setText(String.format("비행 폭\n%3.1f", flightRangeSetting) + "m");
-            }
-        });
-        deRangeBtn.setOnClickListener(new Button.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(flightRangeSetting >= 0.5){
-                    flightRangeSetting -= 0.5;
-                    rangeBtn.setText(String.format("비행 폭\n%3.1f", flightRangeSetting) + "m");
-                }
-            }
-        });
-        //
-        missionBtn.setOnClickListener(new Button.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if (abBtn.getVisibility() == view.GONE) {
-                    abBtn.setVisibility(view.VISIBLE);
-                } else {
-                    abBtn.setVisibility(view.GONE);
-                }
-                if (polygonBtn.getVisibility() == view.GONE) {
-                    polygonBtn.setVisibility(view.VISIBLE);
-                } else {
-                    polygonBtn.setVisibility(view.GONE);
-                }
-                if (cancelBtn.getVisibility() == view.GONE) {
-                    cancelBtn.setVisibility(view.VISIBLE);
-                } else {
-                    cancelBtn.setVisibility(view.GONE);
-                }
-                if (mission_click) {
-                    missionBtn.setBackgroundColor(Color.YELLOW);
-                    mission_click = false;
-                } else {
-                    missionBtn.setBackgroundColor(Color.parseColor("#d3d3d3"));
-                    mission_click = true;
-                }
-            }
-        });
         //
         myMap.setOnMapLongClickListener(new NaverMap.OnMapLongClickListener() {
             @Override
